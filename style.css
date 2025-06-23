@@ -2,7 +2,8 @@ body {
   height: 100vh;
   width: 100vw;
   margin: 0;
-   /* background-color: #dbe5ee; */
+  background-color: #050d21;
+
 }
 
 .title {
@@ -14,9 +15,9 @@ body {
 .title-img {
   position: relative;
   width: 100vw;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
+  /* filter: blur(5px); */
 }
-
 
 .top-text {
   position: absolute;
@@ -35,7 +36,7 @@ h1 {
   margin-top: 1vw;
   display: grid;
   text-align: center;
-  color: navy;
+  color: #050d21;
 }
 
 .top-text p {
@@ -46,7 +47,7 @@ h1 {
   margin: 0;
   margin-top: -2vw;
   text-align: center;
-  color: navy;
+  color: #050d21;
 }
 
 .mitte {
@@ -70,6 +71,8 @@ h1 {
   width: 600px;
   margin: 0 auto;
   text-align: left;
+  font-size: 18px;
+  line-height: 150%;
 }
 
 h2 {
@@ -83,7 +86,7 @@ h2 {
   width: 100vw;
   height: min-content;
   background-color: red;
-  margin-bottom: 10px;
+  margin: 10px;
 }
 .Contact h2 {
   text-align: center;
@@ -97,6 +100,160 @@ h5 {
 h6 {
   text-align: right;
   margin-right: 1vw;
+}
+
+.Contactfield{
+  display: flex;
+  justify-content: right;
+}
+
+input{
+  width: 30vw;
+}
+
+.my-data li{
+  list-style: none;
+}
+
+.projects{
+  display: flex;
+  width: 50vw;
+  height: 300px;
+  justify-content: space-around;
+  margin: 15px auto 15px;
+}
+
+.project1{
+  position: relative;
+  width: 300px;
+  height: 300px; 
+  background-color: snow; 
+  border: 1px solid snow;
+}
+.projects img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover; 
+  transition: opacity 0.3s ease-in-out;
+}
+
+.project2{
+  position: relative;
+  width: 300px;
+  height: 300px; 
+  background-color: snow; 
+  border: 1px solid snow;
+}
+
+.project3{
+  position: relative;
+  width: 300px;
+  height: 300px; 
+  background-color: snow; 
+  border: 1px solid snow;
+}
+/* test */
+
+/* Grundlegende Styles für den Projekt-Container */
+.projects img {
+  position: relative; /* Wichtig für die absolute Positionierung der Beschreibung */
+  width: 300px; /* Oder eine andere passende Breite für dein Projekt */
+  height: 300px; /* Oder eine andere passende Höhe */
+  overflow: hidden; /* Versteckt Inhalte, die über den Container hinausgehen */
+  display: inline-block; /* Für nebeneinanderliegende Projekte im .projects-Container */
+  cursor: pointer; /* Zeigt an, dass der Bereich interaktiv ist */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Ein leichter Schatten */
+  transition: transform 0.3s ease-in-out; /* Optional: Eine leichte Skalierung beim Hover */
+}
+
+/* Stil für das Bild innerhalb des Links */
+.projects img { /* Selektiert das Bild, das in einem Link ist */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Sorgt dafür, dass das Bild den Bereich ausfüllt, ohne verzerrt zu werden */
+  display: block; /* Entfernt zusätzlichen Platz unter dem Bild */
+  transition: opacity 0.3s ease-in-out; /* Sanfter Übergang für die Deckkraft des Bildes */
+}
+
+/* Stil für die Beschreibung, die über das Bild gelegt wird */
+.image-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Halbtransparenter dunkler Hintergrund */
+  color: white;
+  display: flex; /* Für die Zentrierung des Inhalts der Beschreibung */
+  flex-direction: column;
+  justify-content: center; /* Vertikal zentrieren */
+  align-items: center; /* Horizontal zentrieren */
+  text-align: center;
+  padding: 15px;
+  box-sizing: border-box; /* Padding in die Breite/Höhe einbeziehen */
+
+  opacity: 0; /* Standardmäßig unsichtbar */
+  visibility: hidden; /* Versteckt das Element auch für Screenreader */
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* Sanfter Übergang */
+}
+
+/* Stil für Überschriften und Absätze in der Beschreibung */
+.image-description h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.image-description p {
+  margin-bottom: 15px;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+
+/* Beim Hovern über den .project1-Container */
+.project1:hover img {
+  opacity: 0; 
+}
+
+.project2:hover img {
+  opacity: 0; 
+}
+
+.project3:hover img {
+  opacity: 0; 
+}
+.project1:hover .image-description {
+  opacity: 1; /* Beschreibung wird sichtbar */
+  visibility: visible;
+}
+
+/* Optional: Eine leichte Skalierung des gesamten Projekt-Containers beim Hover */
+.project1:hover {
+  transform: scale(1.08); /* Leicht vergrößern */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Schatten verstärken */
+}
+
+/* test */
+.image-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); 
+  color: white;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+  padding: 15px;
+  box-sizing: border-box; 
+
+  opacity: 0; 
+  visibility: hidden; 
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; 
 }
 
 /* Kleiner Bildschirm */
